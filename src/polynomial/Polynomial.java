@@ -8,12 +8,14 @@ public class Polynomial {
 	}
 	
 	public Polynomial(double[] coef_) {
-		for (int i=0; i<coef_.length; i++) {
-			this.coef_[i] = coef_[i];
-		}
+		this.coef_ = coef_;
 	}
 	
 	public int length(Polynomial coefs) {
+		if (coefs.coef_ == null) {
+			return 0;
+		}
+		
 		return coefs.coef_.length;
 	}
 	
